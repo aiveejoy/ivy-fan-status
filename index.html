@@ -20,7 +20,7 @@
                 IOT FAN SWITCH
             </h1>
             <p>
-                The fan is currently turned<span id="status"></span>
+                The fan is currently turned<span id="status"> </span>
             </p>
         </div>
         <button type="button" class="btn btn-dark" id="dark">Off</button>
@@ -46,8 +46,8 @@
             console.log("dark");
             var dt = new Date();
             var time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
-            client.publish("ivy/fan/status","Turned "+ $("#dark").text()) + " : " + time;
-            $("#status").text(" "+$("#dark").text());
+            client.publish("ivy/fan/status","Turned "+ $("#dark").text() + " : " + time);
+            $("#status").text(" " + $("#dark").text());
 
         })
         $("#uno").click(function () {
@@ -55,21 +55,21 @@
             var dt = new Date();
             var time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
             client.publish("ivy/fan/status","Turned at "+ $("#uno").text() + " : " + time);
-            $("#status").text(" "+$("#uno").text());
+            $("#status").text(" " + $("#uno").text());
         })
         $("#dos").click(function () {
             console.log("2");
             var dt = new Date();
             var time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
             client.publish("ivy/fan/status", "Turned at "+$("#dos").text() + " : " + time);
-            $("#status").text(" "+$("#dos").text());
+            $("#status").text(" " + $("#dos").text());
         })
         $("#tres").click(function () {
             console.log("3");
             var dt = new Date();
             var time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
             client.publish("ivy/fan/status", "Turned at "+$("#tres").text() + " : " + time);
-            $("#status").text(" "+$("#tres").text());
+            $("#status").text(" " + $("#tres").text());
         })
 
 
