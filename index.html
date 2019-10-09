@@ -47,7 +47,7 @@
             var dt = new Date();
             var time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
             client.publish("ivy/fan/status","Turned "+ $("#dark").text()) + " : " + time;
-            $("#status").val($("#dark").text());
+            $("#status").text($("#dark").text());
 
         })
         $("#uno").click(function () {
@@ -55,21 +55,21 @@
             var dt = new Date();
             var time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
             client.publish("ivy/fan/status","Turned at "+ $("#uno").text() + " : " + time);
-            $("#status").val($("#uno").text());
+            $("#status").text($("#uno").text());
         })
         $("#dos").click(function () {
             console.log("2");
             var dt = new Date();
             var time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
             client.publish("ivy/fan/status", "Turned at "+$("#dos").text() + " : " + time);
-            $("#status").val($("#dos").text());
+            $("#status").text($("#dos").text());
         })
         $("#tres").click(function () {
             console.log("3");
             var dt = new Date();
             var time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
             client.publish("ivy/fan/status", "Turned at "+$("#tres").text() + " : " + time);
-            $("#status").val($("#tres").text());
+            $("#status").text($("#tres").text());
         })
 
 
